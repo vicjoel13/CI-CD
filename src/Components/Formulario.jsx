@@ -7,7 +7,7 @@ const Formulario = () =>{
         <form>
 
             <div>
-                <label htmlFor="">Marca cambio</label>
+                <label htmlFor="">Marca esta funcionando</label>
                 <div class="form-group">
                   <select class="form-control" name="" id="">
                     <option value="">--Seleccione--</option>
