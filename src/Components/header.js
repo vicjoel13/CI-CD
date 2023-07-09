@@ -11,7 +11,7 @@ const ContenedorHeader = styled.header`
 const Header = ({titulo}) =>{
 return (
     <ContenedorHeader>
-        <h1>{titulo}</h1>
+        <h1>{titulo + "HOla"}</h1>
     </ContenedorHeader>
 )
 
