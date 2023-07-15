@@ -1,30 +1,28 @@
-import React from "react";
-import styled from "@emotion/styled";
-import Header from "./Components/header";
-import Formulario from "./Components/Formulario";
-
-const Contenedor = styled.div`
-max-width: 600px;
-margin:0 auto;
-`;
-
-const ContenedorFormulario = styled.div`
-background-color: #FFF;
-padding: 3rem;
-`;
-
+import "./App.css";
+import HomePage from "./components/home/HomePage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ItemDetail from "./components/itemDetail/ItemDetail";
+import Navbar from "./components/navbar/Navbar";
+import Cart from "./components/cart/Cart";
+import Orders from "./components/orders/Orders";
+import Checkout from "./components/checkout/Checkout";
 
 function App() {
   return (
-    <Contenedor>
-    <Header
-    titulo={"Cotizador de Seguros"}
-    />  
-    <ContenedorFormulario>
-    <Formulario />
-    </ContenedorFormulario>
-
-    </Contenedor>
+    <div className="App">
+      <BrowserRouter>
+        <div>
+          <Navbar />
+        </div>
+        <Routes>
+          <Route path="/item/:id" element={<ItemDetail />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route exact path="/" element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
